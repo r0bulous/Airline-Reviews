@@ -1,0 +1,90 @@
+﻿@model Airline_Reviews.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.AirlineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.AirlineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cabin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cabin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewBody)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
