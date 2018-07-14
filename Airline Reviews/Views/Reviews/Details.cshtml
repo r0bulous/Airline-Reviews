@@ -10,50 +10,57 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: 10px auto auto auto auto auto auto auto auto auto auto 10px;
+            grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
             grid-template-rows: 50px 50px 50px 50px;
             grid-gap: 10px;
-            padding: 10px;
+            /*padding: 10px;*/
         }
 
             .grid-container > div {
                 background-color: rgba(255, 255, 255, 0.8);
                 text-align: center;
-                padding: 20px 14px;
+                /*padding: 10px 10px;*/
             }
 
         .item1 {
-            grid-column: 2;
-            grid-row: 1;
+            grid-column: 2 / span 2;
+            grid-row: 1 / span 2;
             font-weight: 800;
+            font-size: 63px;
+            display: flex;
         }
 
         .item2 {
-            grid-column: 3;
+            display: flex;
+            grid-column: 5;
             grid-row: 1;
-            font-weight: 400;
+            font-weight: 800;
+            font-size: 20px;
+            justify-content: flex-end;
+            padding-top: 12px;
         }
 
         .item3 {
-            grid-column: 4;
+            grid-column: 6;
             grid-row: 1;
-            font-size: 25px;
+            font-size: 30px;
             font-weight: 800;
-        
         }
 
         .item4 {
-            grid-column: 2 / span 3;
-            grid-row: 2 / span 3;
-            background-image: url()
-            
-            @* background-image: @String.Format("url("http://www.gcmap.com/map?P={0}-{1}&MS=bm&MR=120&MX=540x540&PM=*.jpg")", Html.DisplayFor(model => model.Origin), Html.DisplayFor(model => model.Dest))'; *@
+            grid-column: 2 / span 5;
+            display: flex;
+            grid-row: 3 / span 4;
+            background-image: url();
 
+            @* background-image: @String.Format("url("http://www.gcmap.com/map?P={0}-{1}&MS=bm&MR=120&MX=540x540&PM=*.jpg")", Html.DisplayFor(model => model.Origin), Html.DisplayFor(model => model.Dest))'; *@
         }
 
         .item5 {
-            grid-column: 8;
+            grid-column: 5;
+            grid-row: 2;
             font-weight: 800;
+            font-size: 25px;
         }
 
         .item6 {
@@ -62,8 +69,10 @@
         }
 
         .item7 {
-            grid-column: 10 / span 2;
+            grid-column: 6;
+            grid-row: 2;
             font-weight: 800;
+            font-size: 25px;
         }
 
         /*.item8 {
@@ -207,8 +216,16 @@
     <div class="item3">
         @Html.DisplayFor(model => model.FlightNum)
     </div>
-    <div class="item4"> <!-- Image and link for route map. Tried adding as background image but ran into issues getting generated URLs to interpolate correctly. -->
-        <a href='@string.Format("http://www.gcmap.com/mapui?P={0}-{1}&amp;MS=bm", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'><img src='@string.Format("http://www.gcmap.com/map?P={0}-{1}&MS=bm&MR=120&MX=550x150&PM=*", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'></a>
+    <div class="item4">
+        <!-- Image and link for route map. Tried adding as background image but ran into issues getting generated URLs to interpolate correctly. -->
+        <a href='@string.Format("http://www.gcmap.com/mapui?P={0}-{1}&amp;MS=bm", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'><img src='@string.Format("http://www.gcmap.com/map?P={0}-{1}&MS=bm&MR=120&MX=525x175&PM=*", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'></a>
+    </div>
+    <div class="item5">
+        @Html.DisplayFor(model => model.Origin)
+    </div>
+
+    <div class="item7">
+        @Html.DisplayFor(model => model.Dest)
     </div>
 
 

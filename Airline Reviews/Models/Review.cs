@@ -17,6 +17,7 @@ namespace Airline_Reviews.Models
         public int CategoryID { get; set; } // Foreign key for Category model
         public virtual Category Category { get; set; }
         
+
         public int FlightNum { get; set; } // Flight number
         public string Origin { get; set; } // Origin airport
         public string Dest { get; set; } // Destination airport
