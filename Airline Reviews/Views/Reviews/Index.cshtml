@@ -6,50 +6,57 @@
 
 <head>
     <style>
+     
 
         .grid-container {
             display: grid;
-            grid-template-columns: 1em auto auto auto auto auto auto auto auto auto auto 1em;
-            grid-template-rows: 50px auto;
+             grid-template-columns: 1px auto auto auto auto auto auto auto auto auto auto 1px; 
+            /* grid-template-rows: 50px auto; */
             grid-gap: 10px;
-            background-color: #2196F3;
+            background-color: blue;
             padding: 10px;
         }
 
             .grid-container > div {
                 background-color: rgba(255, 255, 255, 0.8);
                 text-align: center;
-                padding: 20px 0;
+                padding: 20px 14px;
                 font-size: 16px;
             }
 
         .item1 {
             grid-column: 2 / span 2;
+            font-weight: 800;
         }
 
         .item2 {
             grid-column: 4 / span 2;
-
+            font-weight: 800;
         }
 
         .item3 {
             grid-column: 6;
+            font-weight: 800;
         }
 
         .item4 {
             grid-column: 7;
+            font-weight: 800;
         }
 
         .item5 {
             grid-column: 8;
+            font-weight: 800;
         }
 
         .item6 {
             grid-column: 9;
+            font-weight: 800;
         }
 
         .item7 {
             grid-column: 10 / span 2;
+            font-weight: 800;
         }
 
         /*.item8 {
@@ -66,11 +73,11 @@
             grid-column-start: 11;
             grid-column-end: 11;
         }*/
-
-        .content1 {
+            .content1 {
             display: flex;
             justify-content: flex-start;
             grid-column: 2 / span 2;
+            padding-left: 2em;
         }
 
         .content2 {
@@ -80,26 +87,18 @@
         }
 
         .content3 {
-            display: flex;
-            justify-content: flex-start;
             grid-column: 6;
         }
 
         .content4 {
-            display: flex;
-            justify-content: flex-start;
-            grid-column:7;
+           grid-column:7;
         }
 
         .content5 {
-            display: flex;
-            justify-content: flex-start;
             grid-column: 8;
         }
 
         .content6 {
-            display: flex;
-            justify-content: flex-start;
             grid-column: 9;
         }
 
