@@ -6,12 +6,13 @@
 
 <head>
     <style>
-     
+
+        /* CSS styling and grid setup */
+
 
         .grid-container {
             display: grid;
-             grid-template-columns: 1px auto auto auto auto auto auto auto auto auto auto 1px; 
-            /* grid-template-rows: 50px auto; */
+            grid-template-columns: 1px auto auto auto auto auto auto auto auto auto auto 1px; 
             grid-gap: 10px;
             background-color: blue;
             padding: 10px;
@@ -23,6 +24,9 @@
                 padding: 20px 14px;
                 font-size: 16px;
             }
+
+        /* CSS grid for column headings */
+
 
         .item1 {
             grid-column: 2 / span 2;
@@ -60,20 +64,8 @@
             font-weight: 800;
         }
 
-        /*.item8 {
-            grid-column-start: 9;
-            grid-column-end: 9;
-        }
+        /* CSS grid for review index */
 
-        .item9 {
-            grid-column-start: 10;
-            grid-column-end: 10;
-        }
-
-        .item10 {
-            grid-column-start: 11;
-            grid-column-end: 11;
-        }*/
             .content1 {
             display: flex;
             justify-content: flex-start;
@@ -118,97 +110,18 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.AirlineName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FlightNum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Origin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dest)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cabin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Stars)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewBody)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.AirlineName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FlightNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Origin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dest)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cabin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stars)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewBody)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
-        </tr>
-    }
-
-
-
-</table>*@
-
-@* Razor-generated items for column headings *@
+@* Razor generated column headings *@
 
 <div class="grid-container">
     <div class="item1">@Html.DisplayNameFor(model => model.Category.AirlineName)</div>
     <div class="item2">@Html.DisplayNameFor(model => model.Title)</div>
-
-    @*<div class="item3">@Html.DisplayNameFor(model => model.FlightNum)</div>*@
-
     <div class="item3">@Html.DisplayNameFor(model => model.Origin)</div>
     <div class="item4">@Html.DisplayNameFor(model => model.Dest)</div>
     <div class="item5">@Html.DisplayNameFor(model => model.Cabin)</div>
-
-    @*<div class="item7">@Html.DisplayNameFor(model => model.ReviewDate)</div>*@
-
     <div class="item6">@Html.DisplayNameFor(model => model.Stars)</div>
 
-    @*<div class="item9">@Html.DisplayNameFor(model => model.ReviewBody)</div>*@
+    @* Razor generated content for reviews *@
 
     @foreach (var item in Model)
     {
@@ -219,9 +132,10 @@
         <div class="content5">@Html.DisplayFor(modelItem => item.Cabin)</div>
         <div class="content6">@Html.DisplayFor(modelItem => item.Stars)</div>
         <div class="content7">
-                             @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                             @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                             @Html.ActionLink("Delete", "Delete", new { id = item.ID })</div>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </div>
 
 
 
