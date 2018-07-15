@@ -16,16 +16,19 @@
 
 
 <body>
-    <div class="top-container">
-        <h1>Airline Reviews</h1>
+    <div class="header-container">
+        <div class="header-brand">
+            <h1>Airline Reviews</h1>
+        </div>
 
 
         <div class="css-navbar">
             <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Airlines", "Index", "Categories")</li>
+                <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
+
             </ul>
 
         </div>

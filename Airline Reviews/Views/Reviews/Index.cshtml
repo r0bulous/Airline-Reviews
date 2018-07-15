@@ -111,7 +111,7 @@
 </p>
 
 
-@* Razor generated column headings *@
+@* Rolumn headings in CSS grid *@
 
 <div class="grid-container">
     <div class="item1">@Html.DisplayNameFor(model => model.Category.AirlineName)</div>
@@ -121,7 +121,7 @@
     <div class="item5">@Html.DisplayNameFor(model => model.Cabin)</div>
     <div class="item6">@Html.DisplayNameFor(model => model.Stars)</div>
 
-    @* Razor generated content for reviews *@
+    @* CSS grid generated in Razor for reviews *@
 
     @foreach (var item in Model)
     {
@@ -132,7 +132,7 @@
         <div class="content5">@Html.DisplayFor(modelItem => item.Cabin)</div>
         <div class="content6">@Html.DisplayFor(modelItem => item.Stars)</div>
         <div class="content7">
-            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Home", "Index", new { id = item.ID }) |
             @Html.ActionLink("Details", "Details", new { id = item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ID })
         </div>

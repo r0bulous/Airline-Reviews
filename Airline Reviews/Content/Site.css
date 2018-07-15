@@ -1,10 +1,34 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 5px;
     padding-bottom: 20px;
 }
 
-.top-container {
-    background-color: blue;
+
+
+.header-container {
+    display: grid;
+    grid-template-rows: 100px 50px 25px;
+    background-image: url('Images/partial wing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+}
+
+.header-brand {
+    color: white;
+    grid-row: 1;
+}
+
+    h1 {
+        font-size: 50px;
+    }
+
+.css-navbar {
+    grid-row: 2;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -32,13 +56,14 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
 }
 
 
 
 li {
-    float: left;
+    float: right;
+    opacity: 1;
 }
 
     li a {
@@ -47,6 +72,7 @@ li {
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        opacity: 1;
     }
 
         li a:hover {
