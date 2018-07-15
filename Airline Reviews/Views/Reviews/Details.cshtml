@@ -5,51 +5,52 @@
 }
 
 <head>
-    <style> /* Begin Details grid setup/styling */
+    <style>
+ /* Begin Details grid setup/styling */
 
 
         .grid-container {
             display: grid;
-            grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+            grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
             grid-template-rows: 50px 50px 50px 50px;
             grid-gap: 10px;
             /*padding: 10px;*/
         }
 
-            .grid-container > div {
+            /*.grid-container > div {
                 background-color: rgba(255, 255, 255, 0.8);
                 text-align: center;
-                /*padding: 10px 10px;*/
-            }
+            }*/
 
         .item1 {
-            grid-column: 2 / span 2;
-            grid-row: 1 / span 2;
-            font-weight: 800;
-            font-size: 63px;
             display: flex;
+            grid-column: 2 / span 3;
+            grid-row: 1 / span 1;
+            font-weight: 800;
+            font-size: 35px;
+            justify-content: flex-start;
         }
 
         .item2 {
             display: flex;
-            grid-column: 5;
+            grid-column: 7;
             grid-row: 1;
-            font-weight: 800;
+            font-weight: 400;
             font-size: 20px;
             justify-content: flex-end;
-            padding-top: 12px;
+            padding-top: 9px;
         }
 
         .item3 {
-            grid-column: 6;
+            grid-column: 8;
             grid-row: 1;
             font-size: 30px;
             font-weight: 800;
+            text-align: center;
         }
 
         .item4 {
-            grid-column: 2 / span 5;
-            display: flex;
+            grid-column: 2 / span 7;
             grid-row: 3 / span 4;
             background-image: url();
 
@@ -57,30 +58,114 @@
         }
 
         .item5 {
-            grid-column: 5;
-            grid-row: 2;
-            font-weight: 800;
-            font-size: 25px;
-        }
-
-        .item6 {
-            grid-column: 9;
-            font-weight: 800;
-        }
-
-        .item7 {
             grid-column: 6;
             grid-row: 2;
             font-weight: 800;
-            font-size: 25px;
+            font-size: 30px;
+            display: flex;
+            justify-content: flex-end;
         }
 
-        /*.item8 {
-            grid-column-start: 9;
-            grid-column-end: 9;
+        .item6 {
+            grid-column: 8;
+            grid-row: 2;
+            font-weight: 800;
+            font-size: 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .item7 {
+            grid-column: 8;
+            grid-row: 2;
+            font-weight: 800;
+            font-size: 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .item8 {
+            grid-column: 10 / span 5;
+            grid-row: 2;
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-start;
+            font-weight: 800;
+            padding-top: 10px;
         }
 
         .item9 {
+            display: flex;
+            grid-column: 2;
+            grid-row: 2;
+            font-weight: 400;
+            font-size: 20px;
+            justify-content: flex-start;
+            padding-top: 9px;
+        }
+
+        .item10 {
+            grid-column: 3;
+            grid-row: 2;
+            font-size: 20px;
+            font-weight: 800;
+            padding-top: 8px;
+        }
+
+        .item11 {
+            grid-column: 10 / span 7;
+            grid-row: 3;
+            font-size: 16px;
+            font-weight: 400;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .item12 {
+            grid-column: 15;
+            grid-row: 2;
+            font-size: 30px;
+            font-weight: 800;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .item13 {
+            grid-column: 16;
+            grid-row: 2;
+            font-size: 16px;
+            font-weight: 400;
+            padding-top: 10px;
+        }
+
+        .item14 {
+            grid-column: 10 / span 2;
+            grid-row: 7;
+            font-size: 16px;
+            font-weight: 800;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .item15 {
+            grid-column: 12 / span 5;
+            grid-row: 7;
+            font-size: 16px;
+            font-weight: 400;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .item16 {
+            grid-column: 2 / span 7;
+            grid-row: 7;
+            font-size: 13px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+
+        /*.item9 {
             grid-column-start: 10;
             grid-column-end: 10;
         }
@@ -88,7 +173,7 @@
         .item10 {
             grid-column-start: 11;
             grid-column-end: 11;
-        }*/
+        }
         .content1 {
             grid-column: 2 / span 2;
         }
@@ -115,92 +200,97 @@
 
         .content7 {
             grid-column: 10 / span 2;
-        }
+        }*/
+
+
     </style>
 </head>
 
-<h2>Details</h2>
+@*
+
+    <h2>Details</h2>
 
 
 
-<div>
-    <h4>Review</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.AirlineName)
-        </dt>
+    <div>
+        <h4>Review</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Category.AirlineName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.AirlineName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Category.AirlineName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FlightNum)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.FlightNum)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FlightNum)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.FlightNum)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Origin)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Origin)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Origin)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Origin)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Dest)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Dest)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Dest)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Dest)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cabin)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cabin)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cabin)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Cabin)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Stars)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Stars)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Stars)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Stars)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewBody)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewBody)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewBody)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewBody)
+            </dd>
 
-    </dl>
-</div>
+        </dl>
+    </div>*@
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
@@ -218,7 +308,7 @@
     </div>
     <div class="item4">
         <!-- Image and link for route map. Tried adding as background image but ran into issues getting generated URLs to interpolate correctly. -->
-        <a href='@string.Format("http://www.gcmap.com/mapui?P={0}-{1}&amp;MS=bm", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'><img src='@string.Format("http://www.gcmap.com/map?P={0}-{1}&MS=bm&MR=120&MX=525x175&PM=*", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'></a>
+        <a href='@string.Format("http://www.gcmap.com/mapui?P={0}-{1}&amp;MS=bm", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'><img src='@string.Format("http://www.gcmap.com/map?P={0}-{1}&MS=bm&MR=120&MX=490x175&PM=*", Html.DisplayFor(model => model.Origin),Html.DisplayFor(model => model.Dest))'></a>
     </div>
     <div class="item5">
         @Html.DisplayFor(model => model.Origin)
@@ -228,7 +318,41 @@
         @Html.DisplayFor(model => model.Dest)
     </div>
 
+    <div class="item8">
+        @Html.DisplayFor(model => model.Title)
+    </div>
 
+    <div class="item9">
+        @Html.DisplayNameFor(model => model.Cabin)
+    </div>
+
+    <div class="item10">
+        @Html.DisplayFor(model => model.Cabin)
+    </div>
+
+    <div class="item11">
+        @Html.DisplayFor(model => model.ReviewBody)
+    </div>
+
+    <div class="item12">
+        @Html.DisplayFor(model => model.Stars)
+    </div>
+    <div class="item13">
+        @Html.DisplayNameFor(model => model.Stars)
+    </div>
+
+    <div class="item14">
+        @Html.DisplayNameFor(model => model.ReviewDate)
+    </div>
+
+    <div class="item15">
+        @Html.DisplayFor(model => model.ReviewDate)
+    </div>
+
+    <div class="item16">
+        Maps generated by the <a href="http://www.gcmap.com/">Great Circle Mapper</a>&nbsp;-
+        copyright &#169; <a href="http://www.kls2.com/~karl/">Karl L. Swartz</a>
+    </div>
 
 
 
