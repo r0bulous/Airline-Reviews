@@ -2,30 +2,76 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<head>
+    <style>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1em 1fr 1fr 1fr 1fr 1fr 1em;
+            grid-template-rows: 75px 75px 75px 75px 75px 75px 75px 25px 25px 25px;
+            grid-gap: 10px;
+            background: linear-gradient(white, #ededed52, #002ba557);
+        }
+
+        .splash {
+            grid-column: 1 / span 7;
+            grid-row: 1 / span 8;
+            background-image: url('../../Content/Images/adult-adventure-aircraft-443430.jpg');
+            background-size: cover;
+        }
+
+        /* Location of button with action link */
+
+        .splashButton {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .splash h3{
+            color: white;
+            padding: 27px;
+            font-size: 42px;
+        }
+
+        .block1 {
+            grid-column: 2 / span 2;
+            grid-row: 5 / span 3;
+            background: linear-gradient(white, #ffffffeb, #eff0f1);
+            padding: 11px;
+            border-color: lightgrey;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .roundedButton.block1 {
+            padding-top: 5px;
+        }
+
+
+
+
+        
+    </style>
+</head>
+
+    <div class="grid-container">
+        <div class="splash">
+            <h3>Airline Reviews includes reviews about flights on passenger airlines.</h3>
+        </div>
+
+        <div class="splashButton">
+            @Html.ActionLink("Read Reviews", "Index", "Reviews", null, new { @class = "roundedButton" })
+        </div>
+
+        <div class="block1">
+
+            <h2>View Airlines</h2>
+            <p>
+                This site covers several airlines. Some are big, and some are small. They are also based in different countries and have different classes of service. This is where to view the list of airlines.
+            </p>
+            @Html.ActionLink("View Airlines", "Index", "Categories", null, new { @class = "roundedButton" })
+
+
+        </div>
+
+      </div>
