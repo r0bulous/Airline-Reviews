@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 5px;
     padding-bottom: 20px;
 }
 
@@ -29,11 +28,13 @@
     color: black;
 }
 
+/* Grid/styling for page header */
 
 
 .header-container {
     display: grid;
     grid-template-rows: 75px 50px 25px;
+    grid-template-columns: auto;
     background-image: url('Images/partial wing.jpg');
     background-size: cover;
     background-position: center;
@@ -44,9 +45,6 @@
     padding-top: 2em;
 }
 
-.jumbotron {
-    padding-top: 10px;
-}
 
 .header-brand {
     color: white;
@@ -62,17 +60,13 @@
 }
 
 /* Set padding to keep content from hitting the edges */
+
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -80,6 +74,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Navbar styling */
+
 
 ul {
     list-style-type: none;
